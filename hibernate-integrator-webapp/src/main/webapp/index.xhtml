@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>Hibernate Integrator-Spike</title>
+	<h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
+
+<body>
+	<h1>Hibernate Integrator-Spike</h1>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel for="firstname">First Name</h:outputLabel>
+			<h:inputText id="firstname" value="#{pageModel.firstname}"/>
+			
+			<h:outputLabel for="lastname">Last Name</h:outputLabel>
+			<h:inputText id="lastname" value="#{pageModel.lastname}"/>
+			
+			<h:outputText/>
+			<h:commandButton value="add" action="#{pageModel.submit()}"/>
+		</h:panelGrid>
+		
+		<hr/>
+		
+		<h:dataTable var="person" value="#{pageModel.allPersons}">
+			<f:facet name="header">available persons:</f:facet>
+			
+			<h:column><h:outputText value="#{person.firstname}"/></h:column>
+			<h:column><h:outputText value="#{person.lastname}"/></h:column>
+		</h:dataTable>
+	</h:form>
+</body> 
+</html>
