@@ -20,9 +20,9 @@ import org.hibernate.service.spi.SessionFactoryServiceRegistry;
  * <p>
  * I don't think this should be used in production.
  */
-public class HibernateIntegrator implements Integrator {
+public class AutoCreateSchemaIntegrator implements Integrator {
 
-	private final Logger logger = Logger.getLogger(HibernateIntegrator.class);
+	private final Logger logger = Logger.getLogger(AutoCreateSchemaIntegrator.class);
 
 	@Override
 	public void integrate(Configuration config, SessionFactoryImplementor factory, 
