@@ -5,8 +5,5 @@
 
 	<persistence-unit name="HibernateIntegratorSpike">
 		<jta-data-source>java:jboss/datasources/HibernateIntegratorSpikeDS</jta-data-source>
-		<properties>
-			<property name="hibernate.hbm2ddl.auto" value="create" />
-		</properties>
 	</persistence-unit>
 </persistence>
