@@ -20,13 +20,13 @@
 			<h:inputText id="lastname" value="#{pageModel.lastname}"/>
 			
 			<h:outputText/>
-			<h:commandButton value="add" action="#{pageModel.submit()}"/>
+			<h:commandButton value="add person" action="#{pageModel.submit()}"/>
 		</h:panelGrid>
 		
 		<hr/>
 		
 		<h:dataTable var="person" value="#{pageModel.allPersons}">
-			<f:facet name="header">available persons:</f:facet>
+			<f:facet name="header">persons in the database:</f:facet>
 			
 			<h:column><h:outputText value="#{person.firstname}"/></h:column>
 			<h:column><h:outputText value="#{person.lastname}"/></h:column>
