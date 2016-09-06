@@ -21,7 +21,7 @@ You can add names to that database.
 
 **webapp** uses **model**. It uses a Hibernate `Integrator` to enable auto schema generation for just this deployment unit.
 
-## Running the Ddemo
+## Running the Demo
 
 Just build and then deploy the webapp.
 The webapp is available at http://localhost:8080/hibernate-integrator-spike/
